@@ -1,24 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Amit Barai — Java Full-Stack Developer portfolio." />
+  <meta name="description" content="Amit Barai — Java full-stack developer based in Hyderabad." />
   <title>Amit Barai | Java Full-Stack Developer</title>
-  <style>
-    html, body, iframe { width: 100%; height: 100%; margin: 0; border: 0; }
-    iframe { display: block; }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="enhancements.css" />
 </head>
+
 <body>
-  <iframe id="portfolio" title="Amit Barai portfolio" src="./My-portfilio/index.html"></iframe>
-  <script>
-    const portfolio = document.querySelector('#portfolio');
-    const syncSection = () => {
-      portfolio.src = `./My-portfilio/index.html${window.location.hash}`;
-    };
-    window.addEventListener('hashchange', syncSection);
-    syncSection();
-  </script>
+  <div class="page-glow glow-one"></div><div class="page-glow glow-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#home"><span>&lt;/&gt;</span> AMIT BARAI</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><i></i><i></i></button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#videos">Videos</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a class="nav-resume" href="./assets/AmitResume.pdf" download>Résumé ↓</a>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme">◐</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> OPEN TO OPPORTUNITIES</p>
+        <h1>Building with<br /><em class="typed-tech" aria-live="polite">Java</em><span class="typing-cursor" aria-hidden="true">|</span></h1>
+        <p class="hero-description">I’m Amit, a <strong>Java full-stack developer with 2+ years of experience</strong> building secure, production-ready applications with Spring Boot, React, microservices, and cloud tooling.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work <b>↗</b></a><a class="button button-quiet" href="./assets/AmitResume.pdf" download>Download résumé <b>↓</b></a></div>
+        <div class="quick-links"><a href="https://github.com/Amit-Barai123" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/amit-barai-185ab22a8/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
+        <div class="hero-proof" aria-label="Professional summary"><div><strong>2+ yrs</strong><span>Full-stack<br />development</span></div><div><strong>4</strong><span>Production-grade<br />applications</span></div><div><strong>Hyderabad</strong><span>India · open to<br />collaboration</span></div></div>
+      </div>
+      <div class="hero-visual">
+        <div class="code-window"><div class="window-bar"><span></span><span></span><span></span><p id="codeFileName">ProductService.java</p></div>
+          <pre aria-label="Live Java code example"><code id="liveCode" aria-live="polite"></code></pre>
+          <div class="code-controls" aria-label="Choose a code example">
+            <button class="code-topic active" data-snippet="crud">CRUD API</button><button class="code-topic" data-snippet="security">JWT Security</button><button class="code-topic" data-snippet="exceptions">Exceptions</button><button class="code-topic" data-snippet="streams">Streams</button><button class="code-topic" data-snippet="threads">Threads</button><button class="code-topic" data-snippet="feign">OpenFeign</button><button class="code-topic" data-snippet="kafka">Kafka</button><button class="code-topic" data-snippet="patterns">Patterns</button>
+          </div>
+          <div class="window-status"><span>●</span> <span id="codeStatus">Typing secure CRUD API…</span></div></div>
+        <div class="hero-photo"><img src="./assets/profile-pic.png" alt="Amit Barai" /></div>
+        <div class="orbit-tag tag-one">JAVA</div><div class="orbit-tag tag-two">SPRING BOOT</div><div class="orbit-tag tag-three">MICROSERVICES</div>
+      </div>
+    </section>
+    <div class="tech-strip" aria-label="Technology focus"><div>JAVA <i>✦</i> SPRING BOOT <i>✦</i> REACT <i>✦</i> MICROSERVICES <i>✦</i> POSTGRESQL <i>✦</i> DOCKER <i>✦</i> AWS <i>✦</i> JAVA <i>✦</i> SPRING BOOT <i>✦</i> REACT <i>✦</i> MICROSERVICES <i>✦</i> POSTGRESQL <i>✦</i> DOCKER <i>✦</i> AWS <i>✦</i></div></div>
+
+    <section class="section about" id="about"><div class="section-heading"><p class="eyebrow">01 / ABOUT ME</p><h2>Engineering products that are <em>secure &amp; scalable.</em></h2></div>
+      <div class="about-grid"><p class="lead">I turn requirements into clean, maintainable applications—from API contracts and database design to responsive user experiences. I enjoy thoughtful architecture, strong security, and the practical details that make software ready to ship.</p>
+        <div class="fact-grid"><div><strong>2+</strong><span>Years of Java full-stack experience</span></div><div><strong>BCA</strong><span>JS University, 2022–2025</span></div><div><strong>MVC</strong><span>Clean, modular application architecture</span></div><div><strong>Agile</strong><span>Collaborative delivery and continuous learning</span></div></div></div>
+    </section>
+
+    <section class="section experience-section" id="experience"><div class="section-heading"><p class="eyebrow">02 / EXPERIENCE</p><h2>From backend logic to <em>live deployments.</em></h2></div>
+      <div class="experience-layout"><p class="experience-intro">Hands-on Java full-stack development spanning secure REST APIs, microservices, React interfaces, data persistence, and Docker-based AWS deployments.</p>
+        <div class="timeline"><article><p>2025 — PRESENT</p><div><h3>Java Full-Stack Developer · Arrow Coders</h3><span>Building full-stack platforms with React, Java, Spring Boot, PostgreSQL, AWS, and Docker—covering dating and e-commerce workflows.</span></div></article><article><p>2025</p><div><h3>Java Full-Stack Developer · Oscar IT Solution</h3><span>Delivered inventory and course-management systems with role-based access, Spring Boot REST APIs, React, PostgreSQL, and cloud deployment.</span></div></article><article><p>CORE FOCUS</p><div><h3>Secure, service-oriented development</h3><span>Designing JWT-protected APIs and independent Spring Boot services with maintainability, observability, and scalability in mind.</span></div></article></div></div>
+    </section>
+
+    <section class="section" id="skills"><div class="section-heading"><p class="eyebrow">03 / TOOLKIT</p><h2>Backend depth,<br /><em>full-stack range.</em></h2></div>
+      <div class="skill-columns"><article class="skill-card"><p class="card-number">01</p><h3>Java &amp; Spring</h3><p>Robust backend systems, secure endpoints, and service design.</p><ul><li>Java &amp; OOP</li><li>Spring Boot</li><li>Spring Data JPA</li><li>Spring Security</li><li>Microservices</li><li>OpenFeign &amp; Kafka</li></ul></article><article class="skill-card"><p class="card-number">02</p><h3>Web &amp; Data</h3><p>Responsive interfaces connected to dependable data layers.</p><ul><li>React &amp; Redux</li><li>JavaScript ES6+</li><li>HTML5 &amp; CSS3</li><li>Tailwind &amp; Bootstrap</li><li>PostgreSQL</li><li>MongoDB</li></ul></article><article class="skill-card"><p class="card-number">03</p><h3>Delivery &amp; Tools</h3><p>Practical workflows from documentation through deployment.</p><ul><li>REST APIs &amp; RBAC</li><li>Docker &amp; AWS EC2</li><li>Git &amp; GitHub</li><li>Postman &amp; Swagger</li><li>Maven &amp; CI/CD</li><li>DSA &amp; SOLID</li></ul></article></div>
+    </section>
+
+    <section class="section video-section" id="videos"><div class="section-heading"><p class="eyebrow">04 / WATCH &amp; BUILD</p><h2>Code, explained<br /><em>by me.</em></h2></div>
+      <div class="video-layout"><a class="channel-card" href="https://www.youtube.com/@JAVADEVELOPER-o1w" target="_blank" rel="noreferrer" aria-label="Visit Amit's Java Developer YouTube channel"><div class="channel-art"><span class="play-button" aria-hidden="true">▶</span><span class="channel-mark">&lt;/&gt;</span><span class="channel-art-label">JAVA DEVELOPER<br /><small>LEARN · BUILD · SHIP</small></span></div><div class="channel-card-footer"><span><b>Watch my channel</b><small>Java Developer · YouTube</small></span><span class="channel-arrow" aria-hidden="true">↗</span></div></a>
+        <div class="video-copy"><p class="video-kicker">FROM THE EDITOR TO THE IDE</p><h3>I share what I’m learning and building.</h3><p>Explore my videos for practical developer content, then see how those skills translate into production projects. Want someone who can build and communicate clearly? Let’s talk.</p><div class="video-topics"><span>Java</span><span>Spring Boot</span><span>Full-stack</span><span>Developer tips</span></div><div class="video-actions"><a class="button button-primary" href="https://www.youtube.com/@JAVADEVELOPER-o1w/videos" target="_blank" rel="noreferrer">Explore videos <b>↗</b></a><a class="button button-quiet" href="#contact">Discuss a role <b>↗</b></a></div></div>
+      </div>
+    </section>
+    <section class="section projects" id="projects"><div class="section-heading project-heading"><p class="eyebrow">05 / SELECTED WORK</p><h2>Projects built for<br /><em>real operations.</em></h2><a href="https://github.com/Amit-Barai123" target="_blank" rel="noreferrer" class="text-link">See GitHub profile ↗</a></div>
+      <div class="project-grid"><article class="project-card project-featured"><div class="project-image"><img src="./assets/project-1.png" alt="Inventory management application preview" /></div><div class="project-content"><p class="project-meta">OSCAR IT SOLUTION · JAN–MAY 2025</p><h3>Vipashna Inventory Management</h3><p>A role-aware inventory workspace that makes stock, users, and transactions easier to manage from one secure dashboard.</p><ul class="project-details"><li>Built JWT authentication with BCrypt encryption for Admin, Operator, and User access.</li><li>Created Spring Boot REST APIs and React dashboards for responsive, real-time workflows.</li><li>Mapped inventory and transaction data with JPA/Hibernate and PostgreSQL; containerised and deployed on AWS EC2.</li></ul><div class="tags"><span>Spring Boot</span><span>React</span><span>PostgreSQL</span><span>Docker</span></div></div></article>
+        <article class="project-card"><div class="project-image"><img src="./assets/project-2.png" alt="Course management application preview" /></div><div class="project-content"><p class="project-meta">OSCAR IT SOLUTION · JUN–NOV 2025</p><h3>LearnerByte Course Management</h3><p>A full-stack learning platform that connects course creation, enrollment, and content delivery in one clear experience.</p><ul class="project-details"><li>Designed REST endpoints for course creation, enrollment management, and learning-resource uploads.</li><li>Implemented distinct Admin, Instructor, and Student permissions across course workflows.</li><li>Integrated React, Spring Boot, and PostgreSQL, then deployed the Dockerised application on AWS EC2.</li></ul><div class="tags"><span>Java</span><span>React</span><span>RBAC</span></div></div></article>
+        <article class="project-card"><div class="project-image"><img src="./assets/growinc.png" alt="Dating application preview" /></div><div class="project-content"><p class="project-meta">ARROW CODERS · DEC 2025–JUN 2026</p><h3>Lovely Dating Application</h3><p>A complete web application for user profiles, match discovery, and conversation flows.</p><ul class="project-details"><li>Built the frontend from scratch with React and Redux Toolkit for predictable profile, match, and chat state.</li><li>Developed Spring Boot APIs for profiles, matching logic, and messaging features.</li><li>Persisted structured user and interaction data in PostgreSQL and deployed on AWS EC2.</li></ul><div class="tags"><span>Redux Toolkit</span><span>Spring Boot</span><span>AWS</span></div><a class="project-store-link" href="https://play.google.com/store/apps/details?id=com.luvly.arrowcoders" target="_blank" rel="noreferrer">Get it on Google Play <span aria-hidden="true">↗</span></a></div></article>
+        <article class="project-card"><div class="project-image"><img src="./assets/talent pro web.png" alt="E-commerce platform preview" /></div><div class="project-content"><p class="project-meta">ARROW CODERS · JUL 2025–PRESENT</p><h3>Simbhapuri Fresh</h3><p>A microservices e-commerce platform for browsing, buying, and managing fresh produce online.</p><ul class="project-details"><li>Decomposed product, cart, order, and user capabilities into independent Spring Boot services.</li><li>Created a responsive React shopping flow for product discovery, cart management, and checkout.</li><li>Secured APIs with JWT, used PostgreSQL across core data, and deployed Docker containers to AWS EC2.</li></ul><div class="tags"><span>Microservices</span><span>JWT</span><span>Docker</span></div><a class="project-store-link" href="https://play.google.com/store/apps/details?id=com.simhapuri.fresh" target="_blank" rel="noreferrer">Get it on Google Play <span aria-hidden="true">↗</span></a></div></article></div>
+    </section>
+    <section class="contact-section" id="contact"><p class="eyebrow">05 / LET’S CONNECT</p><h2>Have a product to<br />build? <em>Let’s talk.</em></h2><a class="contact-mail" href="mailto:yourdostamit@gmail.com">yourdostamit@gmail.com <span>↗</span></a><div><a href="tel:+919369982908">+91 93699 82908</a><a href="https://www.linkedin.com/in/amit-barai-185ab22a8/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/Amit-Barai123" target="_blank" rel="noreferrer">GitHub</a></div></section>
+  </main>
+  <footer><span>© 2026 AMIT BARAI</span><span>JAVA FULL-STACK DEVELOPER · HYDERABAD, INDIA</span></footer>
+  <script src="script.js"></script>
 </body>
 </html>
