@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Amit Barai — Java Full-Stack Developer portfolio." />
+  <title>Amit Barai | Java Full-Stack Developer</title>
+  <style>
+    html, body, iframe { width: 100%; height: 100%; margin: 0; border: 0; }
+    iframe { display: block; }
+  </style>
+</head>
+<body>
+  <iframe id="portfolio" title="Amit Barai portfolio" src="./My-portfilio/index.html"></iframe>
+  <script>
+    const portfolio = document.querySelector('#portfolio');
+    const syncSection = () => {
+      portfolio.src = `./My-portfilio/index.html${window.location.hash}`;
+    };
+    window.addEventListener('hashchange', syncSection);
+    syncSection();
+  </script>
+</body>
+</html>
